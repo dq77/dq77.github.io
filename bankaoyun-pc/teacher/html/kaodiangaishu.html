@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>考点概述</title>
+    <link rel="icon" href="http://ry.com.cn/img/favicon.ico" type="image/x-icon">
+    <link href="../css/bootstrap3.3.7/css/bootstrap.css" rel="stylesheet">
+    <link href="../css/ry-framwork.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/book/ry-choose.css" rel="stylesheet">
+    <link href="../css/book/ry-book.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+    .treeview .list-group-item{cursor:pointer}
+    .treeview span.indent{margin-left:10px;margin-right:10px}
+    .treeview span.icon{width:12px;margin-right:5px}
+    .treeview .node-disabled{color:silver;cursor:not-allowed}
+    .node-showtree{border:none;}
+    .node-showtree:not(.node-disabled):hover{background-color:#F5F5F5;}
+    </style>
+</head>
+<body>
+    <div id="head" class="navbar-wrapper">
+        <div class="container">
+            <nav class="navbar navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle pull-left" data-toggle="offcanvas" data-target="#rightMenu">
+                            <i class="glyphicon glyphicon-list"></i>
+                        </button>
+                        <a class="navbar-brand text-hide logo" href="https://www.ry.com.cn/">东软睿云</a>
+                    </div>
+                    <div class="hidden-xs">
+                        <ul class="nav navbar-nav nav-ry">
+                            <li class="menu-index"><a href="https://www.ry.com.cn/">首页</a></li>
+                            <li class="menu-stu"><a href="https://www.ry.com.cn/report/record.htm">学生</a></li>
+                            <li class="menu-teacher active"><a href="/portal/home.htm">教师</a></li>
+                        </ul>
+                        <div id="login" class="pull-right">
+                            <ul class="nav nav-pills nav-info">
+                                <li class="dropdown pull-right"><a data-toggle="dropdown" class="dropdown-toggle" href="#"> 
+                                    <i class="glyphicon glyphicon-user"></i> 黄奕萍-项城一高20171201<b class="caret"></b></a>
+                                    <ul class="dropdown-menu dropdown-menu-right dropdown-ry">
+                                        <li class="menu-psnInfo"><a href="/user/userInfo.htm">
+                                            <i class="glyphicon glyphicon-info-sign"></i> 个人信息</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li class="menu-pwd"><a href="/user/updataPwd.htm"> 
+                                            <i class="glyphicon glyphicon-edit"></i> 修改密码</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="/logout.htm"> 
+                                            <i class="glyphicon glyphicon-log-out"></i> 退出</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div>服务热线：400-630-0790</div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div id="body">
+        <div class="secMenu hidden-xs">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li class="menu-t-record"><a href="/report/record.htm">评测报告</a></li>
+                    <li class="menu-t-paper"><a href="/paper/paper.htm">精品试卷</a></li>
+                    <li class="menu-t-knowledge"><a href="/knowledge/knowledge.htm">知识树</a></li>
+                    <li class="menu-t-book active"><a href="/book/bookList.htm">伴考云数据</a></li>
+                    <li class="menu-t-homework"><a href="/homework/homework.htm">睿云作业</a></li>
+                </ul>
+            </div>
+        </div>
+		<div class="container content row-offcanvas row-offcanvas-right">
+            <div>
+                <div class="row">
+                    <div class="col-lg-7 col-xs-12">
+                        <div class="go-back">
+                            <a title="返回" href="./index.html">
+                                <i class="glyphicon glyphicon-menu-left"></i>
+                            </a>
+                        </div>
+                        <h3 class="title-area book-ico pull-left" style="width:70%">
+                            <div>伴考云数据</div>
+                            <small>伴考云2017河南高三第二轮冲刺化学辅导书</small>
+                        </h3>
+                    </div>
+                    <div class="col-lg-5 col-xs-12 pull-right pr0 mt20">
+                        <div style="clear:both;">
+                            <form method="post" role="form" action="/book/preface.htm">
+                                <div class="col-xs-3 pl0 pr5">
+                                    <select id="so" name="selectOption" class="form-control">
+                                        <option value="0">考点</option>
+                                        <option value="1">典型题</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-6 pl0 pr5">
+                                    <input class="form-control" name="tpid" placeholder="请输入二维码下方的序号" type="text">
+                                    <span id="returnMsg" class="msg-box n-right" style="color:#a94442" for="tpid"></span>
+                                </div>
+                                <div class="col-xs-3 pl0 pr5">
+                                    <input class="btn btn-primary bprint" value="快速查询" type="submit">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="choose-class mt20">
+                    <ul id="stage" class="nav nav-pills nav3 col-sm-11">
+                        <li role="presentation" class="active"><a href="####">高二一班</a></li>
+                        <li role="presentation"><a href="####">高二二班</a></li>
+                        <li role="presentation"><a href="####">高二三班</a></li>
+                        <li role="presentation"><a href="####">高二四班</a></li>
+                        <li role="presentation"><a href="####">高二五班</a></li>
+                    </ul>
+                    <div class="mt20 clearfix"></div>
+                </div>
+                <div id="msgcontent" class="mt20">
+                    <div id="tree" class="col-sm-4 directory-border" style="">
+                        <div class="row pull-book">
+                            <a href="#" class="book-directory-title">
+                                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            </a>
+                            <div class="book-title-msg">
+                                班级：
+                                <select name="selectOption">
+                                    <option value="0">前20%学生层</option>
+                                    <option value="1">全省平均</option>
+                                </select>
+                                <b>VS</b>
+                                <select name="selectOption">
+                                    <option value="0">前20%学生层 应届</option>
+                                    <option value="1">全省平均</option>
+                                </select>
+                                <a id="whats-circle" tabindex="0" class="btn" role="button" data-toggle="popover"><span class="glyphicon glyphicon-question-sign"></span></a>
+                            </div>
+                            <div id="showtree" class="book-tree treeview">
+                                <ul class="list-group">
+                                    <li class="list-group-item node-showtree" data-nodeid="0" style="color:undefined;background-color:undefined;">
+                                        <span class="icon expand-icon glyphicon glyphicon-minus-sign"></span>
+                                        <span class="icon node-icon"></span>
+                                        专题一化学基本概念
+                                    </li>
+                                    <li class="list-group-item node-showtree" data-nodeid="1" style="color:undefined;background-color:undefined;">
+                                        <span class="indent"></span>
+                                        <span class="icon expand-icon glyphicon glyphicon-minus-sign"></span>
+                                        <span class="icon node-icon"></span>
+                                        第1讲 化学与STSE
+                                    </li>
+                                    <li class="list-group-item node-showtree" data-nodeid="2" style="color:undefined;background-color:undefined;">
+                                        <span class="indent"></span>
+                                        <span class="indent"></span>
+                                        <span class="icon expand-icon glyphicon glyphicon-plus-sign"></span>
+                                        <span class="icon node-icon"></span>
+                                        考点1 化学知识
+                                    </li>
+                                    <li class="list-group-item node-showtree node-selected" data-nodeid="3" style="color:#00c4b4;background-color:#fff;">
+                                        <span class="indent"></span>
+                                        <span class="indent"></span>
+                                        <span class="indent"></span>
+                                        <span class="icon fa fa-file-o"></span>
+                                        <span class="icon node-icon"></span>
+                                        传统中的化学知识<span class="bgc-green"></span>
+                                    </li>
+                                    <li class="list-group-item node-showtree" data-nodeid="3">
+                                        <span class="indent"></span>
+                                        <span class="indent"></span>
+                                        <span class="indent"></span>
+                                        <span class="icon fa fa-file-o"></span>
+                                        <span class="icon node-icon"></span>
+                                        文化中的知识<span class="bgc-red"></span>
+                                    </li>
+                                    <li class="list-group-item node-showtree" data-nodeid="4" style="color:undefined;background-color:undefined;">
+                                        <span class="indent"></span>
+                                        <span class="indent"></span>
+                                        <span class="icon expand-icon glyphicon glyphicon-plus-sign"></span>
+                                        <span class="icon node-icon"></span>
+                                        考点2化学与STSE
+                                    </li>
+                                    <li class="list-group-item node-showtree" data-nodeid="6" style="color:undefined;background-color:undefined;">
+                                        <span class="indent"></span>
+                                        <span class="icon expand-icon glyphicon glyphicon-plus-sign"></span>
+                                        <span class="icon node-icon"></span>
+                                        第2讲 阿伏加德罗常数
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="treePush" class="col-sm-1" style="display: none;">
+                        <div style="width: 25px;padding-left: 2px;position: relative;" class="directory-border book-title-font">
+                            <span style="position:absolute;display: inline-block;width:12px;height:30px;top:0px;right:-12px" class="push-book">
+                                <a class="book-directory-title" href="#">
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </a>
+                            </span>
+                            书籍目录
+                        </div>
+                    </div>
+                    <div id="area" class="col-sm-8">
+                        <div class="row">
+                            <span class="col-sm-12">
+                                <div class="font-large col-sm-12">
+                                    考点：
+                                    <span id="catalog" class="font-large color-ry-blue">传统文化中的化学知识</span>
+                                </div>
+                            </span>
+                        </div>
+                        <div class="mt20">
+                            <ul class="nav nav-pills nav6">
+                                <li class="active"><a href="####">考点概述</a></li>
+                                <li><a href="####">经典错题</a></li>
+                                <li><a href="####">班级错题(5)</a></li>
+                            </ul>
+                        </div>
+                        <div id="bookTemplet">
+                            <div class="row mt20">
+                                <div class="report-title">
+                                    <div class="title-1th"><span class="font-large">1. 概况</span></div>
+                                    <div class="ry-report col-sm-12">
+                                        <div id="gk_display" class="col-sm-12">
+                                            <div class="table-content">该考点五年内高考考试频度是
+                                                <span class="table-content-num color-ry-blue">4</span>
+                                                次，五年内高考考点总分是
+                                                <span class="table-content-num color-ry-blue">24.0</span>
+                                                分。
+                                            </div>
+                                        </div>
+                                        <p class="dfl-title col-sm-12">班级得分率对比图</p>
+                                        <div id="dfl_chart" class="report-content col-sm-12"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row mt20">
+                                <div class="report-title">
+                                    <div class="title-1th"><span class="font-large">2. 该考点的学生掌握情况</span></div>
+                                    <div class="ry-report col-sm-12">
+                                        <table class="point-zw table table-striped ry-table-striped mt20">
+                                            <thead>
+                                                <tr>
+                                                    <th>姓名</th><th>我的得分率</th><th>错题数</th><th>详细</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td>付佳琪</td><td><span class="bgc-red"></span>偏高</td><td>2</td><td><a href="./stu-kaodianzhangwo.html">查看详细</a></td></tr>
+                                                <tr><td>胡睿</td><td><span class="bgc-green"></span>偏低</td><td>5</td><td><a href="./stu-kaodianzhangwo.html">查看详细</a></td></tr>
+                                                <tr><td>付佳琪</td><td><span class="bgc-red"></span>偏高</td><td>2</td><td><a href="./stu-kaodianzhangwo.html">查看详细</a></td></tr>
+                                                <tr><td>胡睿</td><td><span class="bgc-green"></span>偏低</td><td>5</td><td><a href="./stu-kaodianzhangwo.html">查看详细</a></td></tr>
+                                                <tr><td>付佳琪</td><td><span class="bgc-red"></span>偏高</td><td>2</td><td><a href="./stu-kaodianzhangwo.html">查看详细</a></td></tr>
+                                                <tr><td>-</td><td>-</td><td>-</td><td><a id="no-book-info" tabindex="0" class="btn" role="button" data-toggle="popover"><span class="glyphicon glyphicon-exclamation-sign"></span></a></td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>			
+                            <hr>
+                            <div class="row mt20">
+                                <div class="report-title">
+                                    <div class="title-1th"><span class="font-large">3. 高三学段涉及考点的考试</span></div>
+                                    <div class="ry-report col-sm-12">
+                                        <table class="point-zw table table-striped ry-table-striped mt20">
+                                            <thead>
+                                                <tr>
+                                                    <th>考试日期</th><th>班级得分率</th><th>详细</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td>2017-02-03</td><td>98.7%</td><td><a href="./datiqingkuang.html">查看详细</a></td></tr>
+                                                <tr><td>2017-02-03</td><td class="c-red">64.2%</td><td><a href="./datiqingkuang.html">查看详细</a></td></tr>
+                                                <tr><td>2017-02-03</td><td>98.7%</td><td><a href="./datiqingkuang.html">查看详细</a></td></tr>
+                                                <tr><td>2017-02-03</td><td>98.7%</td><td><a href="./datiqingkuang.html">查看详细</a></td></tr>
+                                                <tr><td>2017-02-03</td><td>98.7%</td><td><a href="./datiqingkuang.html">查看详细</a></td></tr>
+                                                <tr><td>2017-02-03</td><td>98.7%</td><td><a href="./datiqingkuang.html">查看详细</a></td></tr>
+                                                <tr><td>2017-02-03</td><td>98.7%</td><td><a href="./datiqingkuang.html">查看详细</a></td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div id="classicalCardsContent"></div>
+                        </div>
+                        <div class="col-sm-12" id="mistakesContent"></div>
+                        <div class="col-sm-12" id="stuTestPointContent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-xs-12">
+                    <div class="breadcrumbs hidden-xs">
+                        <div class="container">
+                            <ul class="breadcrumb ">
+                                <li><a href="/us/aboutUs.htm">关于我们</a></li>
+                                <li><a href="/us/joinUs.htm">加盟合作</a></li>
+                                <li><a href="/us/contactUs.htm">联系我们</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="wechat-footer visible-xs-block">
+                        更多贴心服务请关注睿云微信：<span class="wechat">ruiyun360</span>
+                    </div>
+                    <p class="muted credit hidden-xs">
+                        版权所有 <span class="glyphicon glyphicon-copyright-mark"></span> 2014-2017 沈阳东软睿道教育服务有限公司
+                    </p>
+                    <p class="muted credit hidden-xs">ICP证：辽B2-20130060-6</p>
+                </div>
+                <div class="col-sm-4 hidden-xs">
+                    <div class="footer_logo pull-right"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+	<script src="../js/jquery-1.11.1.js"></script>
+	<script src="../css/bootstrap3.3.7/js/bootstrap.js"></script>
+	<script src="../js/echarts.3.6.0.min.js"></script>
+    <script src="../js/bootstrap-treeview.js"></script>
+    <script src="../js/dfl-echart.js"></script>
+    <script>
+        $(function () {
+            var whatsCircleOptions = {
+                content: '得分率对比情况图例<br/><span class="bgc-green"></span>得分率≥对比数据<br/><span class="bgc-red"></span>得分率≤对比数据',
+                html: true,
+                placement: 'bottom',
+                trigger: 'focus'
+            };
+            $('#whats-circle').popover(whatsCircleOptions);
+            var noBookInfo = {
+                content: '该学生书籍未激活或未购买',
+                html: true,
+                placement: 'bottom',
+                trigger: 'focus'
+            };
+            $('#no-book-info').popover(noBookInfo);
+        })
+    </script>
+</body>
+</html>

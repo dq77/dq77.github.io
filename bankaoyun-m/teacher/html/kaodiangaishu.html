@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>考点概述</title>
+    <link rel="icon" href="http://ry.com.cn/img/favicon.ico" type="image/x-icon">
+    <link href="../css/bootstrap3.3.7/css/bootstrap.css" rel="stylesheet">
+    <link href="../css/ry-framwork.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
+	<link src="http://ry.com.cn/js/lib/tree/bootstrap-treeview.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+	
+<div id="head" class="navbar-wrapper">
+	<div class="container">
+		<nav class="navbar navbar-static-top">
+            <div>
+                <button type="button" class="navbar-toggle pull-left" data-toggle="offcanvas" data-target="#rightMenu">
+                    <i class="glyphicon glyphicon-list"></i>
+                </button>
+                <a class="navbar-brand text-hide logo" href="####">东软睿云</a>
+            </div>
+            <ul class="nav navbar-nav nav-ry hidden-xs">
+                <li class="menu-index"><a href="####">首页</a></li>
+                <li class="menu-stu"><a href="####">学生</a></li>
+                <li class="menu-teacher"><a href="####">教师</a></li>
+            </ul>
+            <div id="login" class="pull-right">
+                <ul class="nav nav-pills nav-info">
+                    <li class="dropdown pull-right"><a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <i class="glyphicon glyphicon-user"></i> 薛文浩 <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-right dropdown-ry">
+                            <li class="menu-psnInfo"><a href="####">
+                                <i class="glyphicon glyphicon-info-sign"></i> 个人中心
+                            </a></li>
+                            <li class="divider"></li>
+                            <li><a href="####"> 
+                                <i class="glyphicon glyphicon-log-out"></i> 退出
+                            </a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="call-num">服务热线：400-630-0790</div>
+			</div>
+		</nav>
+	</div>
+</div>
+<div id="body">
+	<div class="container content row-offcanvas row-offcanvas-right">
+        <div class="row head-title">
+            <a href="./zongbiao.html" class="pull-left">
+                <i class="glyphicon glyphicon-chevron-left"></i>
+            </a>
+            <h2 class="pull-left">考点1 集合</h2>
+            <div class="pull-right">
+                <select class="pick-class" name="selectOption">
+                    <option value="0">切换班级</option>
+                    <option value="1">高二四班</option>
+                    <option value="1">高二四班</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="kdgs-nav col-xs-12">
+                <ul class="nav nav-pills nav5">
+                    <li class="active"><a href="####">考点概述</a></li>
+                    <li><a href="####">经典试题</a></li>
+                    <li><a href="####">班级错题</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="exam-title col-xs-9">
+                <span>班级整体得分率</span><b> VS </b><span>全省应届平均得分率</span>
+            </div>
+            <div class="exam-data col-xs-3">
+                <span class="bgc-red"></span> 偏低
+            </div>
+        </div>
+        <div class="row">
+            <div class="exam-content col-xs-12">
+                <div class="question-info">
+                    <h3>概况</h3>
+                    <p>该考点五年内高考考试频度是<span class="color-ry-blue">
+                        <b>5</b>
+                    </span>次，五年内高考考点总分是<span class="color-ry-blue">
+                        <b>25.0</b>    
+                    </span>分</p>
+                    <h4 class="tac color-ry-blue">班级得分率对比图</h4>
+                    <div id="dfl_chart" class="row"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="exam-title col-xs-12">
+            </div>
+        </div>
+        <div class="row">
+            <div class="exam-content col-xs-12">
+                <div class="question-info">
+                    <h3>该考点的学生掌握情况</h3>
+                    <ul class="stu-zwqk-ul">
+                        <li>
+                            <a href="./stu-kaodianzhangwo.html">
+                                <div>
+                                    <h4>付佳琪
+                                        <div class="more-icon pull-right">
+                                            <span class="glyphicon glyphicon-menu-right"></span>
+                                        </div>
+                                    </h4>
+                                    个人考点得分率<b> VS </b>全省应届平均值：<span class="bgc-green"></span>偏高
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./stu-kaodianzhangwo.html">
+                                <div>
+                                    <h4>付佳琪
+                                        <div class="more-icon pull-right">
+                                            <span class="glyphicon glyphicon-menu-right"></span>
+                                        </div>
+                                    </h4>
+                                    个人考点得分率<b> VS </b>全省应届平均值：<span class="bgc-red"></span>偏低
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./stu-kaodianzhangwo.html">
+                                <div>
+                                    <h4>付佳琪
+                                        <div class="more-icon pull-right">
+                                            <span class="glyphicon glyphicon-menu-right"></span>
+                                        </div>
+                                    </h4>
+                                    个人考点得分率<b> VS </b>全省应届平均值：<span class="bgc-green"></span>偏高
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="####">
+                                <div>
+                                    <h4>付佳琪
+                                    </h4>
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span> 该学生书籍未激活或未购买
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="####" class="more-stu-btn btn col-xs-12" role="button">查看更多<span class="glyphicon glyphicon-menu-right"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="exam-title col-xs-12">
+            </div>
+        </div>
+        <div class="row">
+            <div class="exam-content col-xs-12">
+                <div class="question-info">
+                    <h3>高三学段涉及考点的考试</h3>
+                    <table class="stu-point-rate-table table table-striped ry-table-striped">
+                        <thead>
+                            <tr>
+                                <td>考试日期</td>
+                                <td>班级得分率</td>
+                                <td>详情</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>2018-02-03</td>
+                                <td><span class="c-red">62.7%</span></td>
+                                <td><a href="./datiqingkuang.html">查看详细</a></td></tr>
+                            <tr><td>2018-01-18</td>
+                                <td><span class="">98.4%</span></td>
+                                <td><a href="./datiqingkuang.html">查看详细</a></td></tr>
+                            <tr><td>2017-12-24</td>
+                                <td><span class="">87.7%</span></td>
+                                <td><a href="./datiqingkuang.html">查看详细</a></td></tr>
+                            <tr><td>2017-09-07</td>
+                                <td><span class="c-red">60.5%</span></td>
+                                <td><a href="./datiqingkuang.html">查看详细</a></td></tr>
+                            <tr><td>2017-06-21</td>
+                                <td><span class="">79.5%</span></td>
+                                <td><a href="./datiqingkuang.html">查看详细</a></td></tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="wechat-footer">
+                    更多贴心服务请关注睿云微信：<span class="wechat">ruiyun360</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+	<script src="../js/jquery-1.11.1.js"></script>
+    <script src="../js/echarts.3.6.0.min.js"></script>
+    <script src="../js/dfl-echart.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>上线率表</title>
+    <link href="../css/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
+    <link href="../css/stu-rank.css" rel="stylesheet">
+    <link href="../css/tea-common-css.css" rel="stylesheet">
+    <script src="../js/jquery.js"></script>
+    <script src="../css/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/online-rate.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+        <script src="../js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header>
+        
+        <h1 class="report-title">
+            <img src="../img/report-title.png" alt=""/>数学(理科)考试分析报告</h1>
+        <div class="menu">
+            当前视角
+            <div class="btn-group ry-drop-down choose-sense">
+                <button type="button" class="btn btn-default dropdown-toggle choose-sense" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    数学科任教师 <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">数学科任教师</a></li>
+                    <li><a href="#">语文科任教师</a></li>
+                    <li><a href="#">XXXX</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <nav class="choose-subject">
+        <div>
+            <h2>2017年中阳县高三年级第七次名校联考</h2>
+        </div>
+        <div>
+            <ul class="nav nav-pills nav1">
+                <li class="active"><a href="#">数学（理）</a></li>
+                <li><a href="#">数学（文）</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="full-back">
+        <div class="left-area">
+            <div class="ry-teach-repo-div">
+                <ul class="nav nav-pills nav-stacked ry-teachrepotr-nav-left">
+                    <li><a href="./index.html"><div><span class="glyphicon glyphicon-home"></span></div>首页概述</a></li>
+                    <li class="active"><a href="./online-rate.html"><div><span class="glyphicon glyphicon-signal"></span></div>重要数据统计</a></li>
+                    <li><a href="./question-analyze.html"><div><span class="glyphicon glyphicon-list-alt"></span></div>试题分析</a></li>
+                    <li><a href="./knowledge-point-analyze.html"><div><span class="glyphicon glyphicon-education"></span></div>试题知识点分析</a></li>
+                    <li><a href="#"><div><span class="glyphicon glyphicon-tasks"></span></div>试卷质量分析</a></li>
+                </ul>
+                <a href="####" class="toggle-nav-button"><img src="../img/toggle-button.png"></a>
+            </div>
+        </div>
+        <div class="row main-view">
+            <div class="tea-report-navrow">
+                <ul class="nav nav-pills nav2">
+                    <li class="active senior-only"><a href="#">上线率<p>(仅高年级)</p><span class="caret"></span></a></li>
+                    <li><a href="#">四率对比</a></li>
+                    <li><a href="./stu-rank.html">学生成绩排名</a></li>
+                    <li><a href="#">数学小题分</a></li>
+                    <li><a href="#">试题失分率</a></li>
+                    <li><a href="./segmented.html">学生分段统计</a></li>
+                    <li><a href="#">各档学生平均分</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-12">
+                <div class="main-report-title">
+                    <button type="button" class="btn ry-btn-blue fr">下载Excel表格</button>
+                    <h1>上线率表</h1>
+                    <p>比较所教各班之间，一本、二本过线人数，双有效人数及临界生人数对比</p>
+                </div>
+                <form action="" class="choose-form">
+                    <ul>
+                        <li class="clearfix">
+                            <div>有效分</div>
+                            <div class="vaild-score">
+                                <div class="fl"> 
+                                    第一分段总分有效分:
+                                    <span class="c-orange" id="list-1-total-span">540</span>
+                                    <input type="text" class="form-control" id="list-1-total" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();">
+                                    分</div>
+                                <div class="fl"> 
+                                    第一分段数学有效分:
+                                    <span class="c-orange" id="list-1-math-span">115</span>
+                                    <input type="text" class="form-control" id="list-1-math" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();">
+                                    分</div>
+                                <div class="fl"> 
+                                    第二分段总分有效分:
+                                    <span class="c-orange" id="list-2-total-span">420</span>
+                                    <input type="text" class="form-control" id="list-2-total" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();">
+                                    分</div>
+                                <div class="fl"> 
+                                    第一分段数学有效分:
+                                    <span class="c-orange" id="list-2-math-span">102</span>
+                                    <input type="text" class="form-control" id="list-2-math" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();">
+                                    分</div>
+                                <div class="fl"> 
+                                    <button type="button" class="btn btn-default" id="diy-vaild-score">自定义</button>
+                                    <button type="button" class="btn btn-default" id="save-diy-vaild-score">保存</button>
+                                    <button type="button" class="btn btn-default" id="cancel-diy-vaild-score">还原</button>
+                                </div>
+                            </div>
+                            <div class="wrong-input-score hidden">
+                                <span class="glyphicon glyphicon-warning-sign"></span>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div>选择对比班级</div>
+                            <div class="fl">
+                                <div class="choose-class">
+                                    <label class="checkbox-inline ry-checkbox">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 全部所教班级
+                                    </label>
+                                </div>
+                                <div class="choose-class">
+                                    <label class="checkbox-inline ry-checkbox">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 高三一班
+                                    </label>
+                                    <label class="checkbox-inline ry-checkbox">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 高三二班
+                                    </label>
+                                    <label class="checkbox-inline ry-checkbox">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 高三三班
+                                    </label>
+                                    <label class="checkbox-inline ry-checkbox">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 高三四班
+                                    </label>
+                                    <label class="checkbox-inline ry-checkbox">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 高三五班
+                                    </label>
+                                    <label class="checkbox-inline ry-checkbox">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 高三六班
+                                    </label>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+                <div class="cb"><button type="button" class="btn ry-btn-blue mt15">立即统计</button></div>
+                
+                <div class="cb">
+                    <div class="fl">
+                        <ul class="nav nav-pills nav4 mt15">
+                            <li role="presentation" class="active"><a href="####">标记第一分段学生</a></li>
+                            <li role="presentation"><a href="####">标记第二分段学生</a></li>
+                        </ul>
+                    </div>
+                    <div class="fr mt20">
+                        <div class="legend">
+                            图例：<span class="bgc-light-green"></span>过线&nbsp;
+                            <span class="bgc-double-valid"></span>双有效&nbsp;
+                            <span class="bgc-light-orange"></span>临界生
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <table class="table table-striped ry-table-striped">
+                            <thead>
+                                <tr>
+                                    <th colspan="3">高三一班（30人参加考试）</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>第一分段：4人</td><td>双有效<span class="c-green">2</span></span>人</td><td>临界<span class="c-orange">3</span></span>人</td></tr>
+                                <tr><td>第二分段：4人</td><td>双有效<span class="c-green">2</span></span>人</td><td>临界<span class="c-orange">3</span></span>人</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <table class="table table-striped ry-table-striped">
+                            <thead>
+                                <tr>
+                                    <th colspan="3">高三二班（30人参加考试）</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>第一分段：4人</td><td>双有效<span class="c-green">2</span></span>人</td><td>临界<span class="c-orange">3</span></span>人</td></tr>
+                                <tr><td>第二分段：4人</td><td>双有效<span class="c-green">2</span></span>人</td><td>临界<span class="c-orange">3</span></span>人</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <table class="table table-striped ry-table-striped">
+                            <thead>
+                                <tr>
+                                    <th colspan="3">高三四班（30人参加考试）</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>第一分段：4人</td><td>双有效<span class="c-green">2</span></span>人</td><td>临界<span class="c-orange">3</span></span>人</td></tr>
+                                <tr><td>第二分段：4人</td><td>双有效<span class="c-green">2</span></span>人</td><td>临界<span class="c-orange">3</span></span>人</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <table class="table table-striped ry-table-striped">
+                            <thead>
+                                <tr>
+                                    <th colspan="3">高三六班（30人参加考试）</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>第一分段：4人</td><td>双有效<span class="c-green">2</span></span>人</td><td>临界<span class="c-orange">3</span></span>人</td></tr>
+                                <tr><td>第二分段：4人</td><td>双有效<span class="c-green">2</span></span>人</td><td>临界<span class="c-orange">3</span></span>人</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row scroll">
+                    <div class="col-md-3">
+                        <table class="table table-striped ry-table-striped stu-score-table">
+                            <thead>
+                                <tr>
+                                    <th>姓名</th><th>总分</th><th>数学分</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>张三风阿</td><td class="bgc-light-green">545</td><td class="bgc-double-valid">119</td></tr>
+                                <tr><td>张三</td><td class="bgc-light-green">545</td><td class="bgc-double-valid">118</td></tr>
+                                <tr><td>张三</td><td class="bgc-light-orange">545</td><td>116</td></tr>
+                                <tr><td>张三</td><td class="bgc-light-orange">545</td><td>115</td></tr>
+                                <tr><td>张三</td><td class="bgc-light-orange">545</td><td>111</td></tr>
+                                <tr><td>张三</td><td>545</td><td>100</td></tr>
+                                <tr><td>张三</td><td>545</td><td>99</td></tr>
+                                <tr><td>张三</td><td>545</td><td>98</td></tr>
+                                <tr><td>张三</td><td>545</td><td>96</td></tr>
+                                <tr><td>张三</td><td>545</td><td>89</td></tr>
+                                <tr><td>张三</td><td>545</td><td>86</td></tr>
+                                <tr><td>张三</td><td>545</td><td>83</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-3">
+                        <table class="table table-striped ry-table-striped stu-score-table">
+                            <thead>
+                                <tr>
+                                    <th>姓名</th><th>总分</th><th>数学分</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>张三风阿</td><td class="bgc-light-green">545</td><td class="bgc-double-valid">119</td></tr>
+                                <tr><td>张三</td><td class="bgc-light-green">545</td><td class="bgc-double-valid">118</td></tr>
+                                <tr><td>张三</td><td class="bgc-light-orange">545</td><td>116</td></tr>
+                                <tr><td>张三</td><td class="bgc-light-orange">545</td><td>115</td></tr>
+                                <tr><td>张三</td><td class="bgc-light-orange">545</td><td>111</td></tr>
+                                <tr><td>张三</td><td>545</td><td>100</td></tr>
+                                <tr><td>张三</td><td>545</td><td>99</td></tr>
+                                <tr><td>张三</td><td>545</td><td>98</td></tr>
+                                <tr><td>张三</td><td>545</td><td>96</td></tr>
+                                <tr><td>张三</td><td>545</td><td>89</td></tr>
+                                <tr><td>张三</td><td>545</td><td>86</td></tr>
+                                <tr><td>张三</td><td>545</td><td>83</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-3">
+                        <table class="table table-striped ry-table-striped stu-score-table">
+                            <thead>
+                                <tr>
+                                    <th>姓名</th><th>总分</th><th>数学分</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>张三风阿</td><td class="bgc-light-green">545</td><td class="bgc-double-valid">119</td></tr>
+                                <tr><td>张三</td><td class="bgc-light-green">545</td><td class="bgc-double-valid">118</td></tr>
+                                <tr><td>张三</td><td class="bgc-light-orange">545</td><td>116</td></tr>
+                                <tr><td>张三</td><td class="bgc-light-orange">545</td><td>115</td></tr>
+                                <tr><td>张三</td><td class="bgc-light-orange">545</td><td>111</td></tr>
+                                <tr><td>张三</td><td>545</td><td>100</td></tr>
+                                <tr><td>张三</td><td>545</td><td>99</td></tr>
+                                <tr><td>张三</td><td>545</td><td>98</td></tr>
+                                <tr><td>张三</td><td>545</td><td>96</td></tr>
+                                <tr><td>张三</td><td>545</td><td>89</td></tr>
+                                <tr><td>张三</td><td>545</td><td>86</td></tr>
+                                <tr><td>张三</td><td>545</td><td>83</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-3">
+                        <table class="table table-striped ry-table-striped stu-score-table">
+                            <thead>
+                                <tr>
+                                    <th>姓名</th><th>总分</th><th>数学分</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>张三风阿</td><td class="bgc-light-green">545</td><td class="bgc-double-valid">119</td></tr>
+                                <tr><td>张三</td><td class="bgc-light-green">545</td><td class="bgc-double-valid">118</td></tr>
+                                <tr><td>张三</td><td class="bgc-light-orange">545</td><td>116</td></tr>
+                                <tr><td>张三</td><td class="bgc-light-orange">545</td><td>115</td></tr>
+                                <tr><td>张三</td><td class="bgc-light-orange">545</td><td>111</td></tr>
+                                <tr><td>张三</td><td>545</td><td>100</td></tr>
+                                <tr><td>张三</td><td>545</td><td>99</td></tr>
+                                <tr><td>张三</td><td>545</td><td>98</td></tr>
+                                <tr><td>张三</td><td>545</td><td>96</td></tr>
+                                <tr><td>张三</td><td>545</td><td>89</td></tr>
+                                <tr><td>张三</td><td>545</td><td>86</td></tr>
+                                <tr><td>张三</td><td>545</td><td>83</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="back-home"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;返回报告首页</button></div>
+    </section>
+    <footer>
+        
+    </footer>
+</body>
+</html>

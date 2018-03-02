@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>学生成绩排名表</title>
+    <link href="../css/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
+    <link href="../css/stu-rank.css" rel="stylesheet">
+    <link href="../css/tea-common-css.css" rel="stylesheet">
+    <script src="../js/jquery.js"></script>
+    <script src="../css/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="../js/index.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+        <script src="../js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header>
+        
+        <h1 class="report-title">
+            <img src="../img/report-title.png" alt=""/>数学(理科)考试分析报告</h1>
+        <div class="menu">
+            当前视角
+            <div class="btn-group ry-drop-down choose-sense">
+                <button type="button" class="btn btn-default dropdown-toggle choose-sense" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    数学科任教师 <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">数学科任教师</a></li>
+                    <li><a href="#">语文科任教师</a></li>
+                    <li><a href="#">XXXX</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <nav class="choose-subject">
+        <div>
+            <h2>2017年中阳县高三年级第七次名校联考</h2>
+        </div>
+        <div>
+            <ul class="nav nav-pills nav1">
+                <li class="active"><a href="#">数学（理）</a></li>
+                <li><a href="#">数学（文）</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="full-back">
+        <div class="left-area">
+            <div class="ry-teach-repo-div">
+                <ul class="nav nav-pills nav-stacked ry-teachrepotr-nav-left">
+                    <li><a href="./index.html"><div><span class="glyphicon glyphicon-home"></span></div>首页概述</a></li>
+                    <li class="active"><a href="./online-rate.html"><div><span class="glyphicon glyphicon-signal"></span></div>重要数据统计</a></li>
+                    <li><a href="./question-analyze.html"><div><span class="glyphicon glyphicon-list-alt"></span></div>试题分析</a></li>
+                    <li><a href="./knowledge-point-analyze.html"><div><span class="glyphicon glyphicon-education"></span></div>试题知识点分析</a></li>
+                    <li><a href="#"><div><span class="glyphicon glyphicon-tasks"></span></div>试卷质量分析</a></li>
+                </ul>
+                <a href="####" class="toggle-nav-button"><img src="../img/toggle-button.png"></a>
+            </div>
+        </div>
+        <div class="row main-view">
+            <div class="tea-report-navrow">
+                <ul class="nav nav-pills nav2">
+                    <li class="senior-only"><a href="./online-rate.html">上线率<p>(仅高年级)</p></a></li>
+                    <li><a href="#">四率对比</a></li>
+                    <li class="active"><a href="#">学生成绩排名<span class="caret"></span></a></li>
+                    <li><a href="#">数学小题分</a></li>
+                    <li><a href="#">试题失分率</a></li>
+                    <li><a href="./segmented.html">学生分段统计</a></li>
+                    <li><a href="#">各档学生平均分</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-12">
+                <div class="main-report-title">
+                    <button type="button" class="btn ry-btn-blue fr">下载Excel表格</button>
+                    <h1>学生成绩排名</h1>
+                    <p>查看学生总分成绩排名和所教学科成绩排名</p>
+                </div>
+                <form action="" class="choose-form">
+                    <ul>
+                        <li class="clearfix">
+                            <div>选择对比班级</div>
+                            <div class="fl">
+                                <div class="choose-class">
+                                    <label class="checkbox-inline ry-checkbox">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 全部所教班级
+                                    </label>
+                                </div>
+                                <div class="choose-class">
+                                    <label class="checkbox-inline ry-checkbox">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 高三一班
+                                    </label>
+                                    <label class="checkbox-inline ry-checkbox">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 高三二班
+                                    </label>
+                                    <label class="checkbox-inline ry-checkbox">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 高三三班
+                                    </label>
+                                    <label class="checkbox-inline ry-checkbox">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 高三四班
+                                    </label>
+                                    <label class="checkbox-inline ry-checkbox">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 高三五班
+                                    </label>
+                                    <label class="checkbox-inline ry-checkbox">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 高三六班
+                                    </label>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+                <div class="col-xs-12"><button type="button" class="btn ry-btn-blue mt15">立即统计</button></div>
+                <div class="col-xs-12">
+                    <div class="form-group has-feedback ry-search-input search-stu-input">
+                        <input type="text" class="form-control" placeholder="搜索" id="inputSearch" aria-describedby="inputSearchStatus">
+                        <span class="glyphicon glyphicon-search"></span>
+                        <span class="glyphicon glyphicon-arrow-right"></span>
+                    </div>
+                </div>
+                <table class="table table-striped ry-table-striped class-rank-table">
+                    <thead>
+                        <tr>
+                            <th>姓名</th><th>考号</th><th>班级</th><th>总分</th><th>班序</th><th>校序</th><th>数学分</th><th>班序</th><th>校序</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>牛梦乐</td><td>80000023747</td><td>高三一班</td><td>548</td><td>1</td><td>1</td><td>119</td><td>1</td><td>1</td></tr>
+                        <tr><td>马鹏飞</td><td>80000023747</td><td>高三二班</td><td>544</td><td>1</td><td>1</td><td>118</td><td>1</td><td>1</td></tr>
+                        <tr><td>牛梦乐</td><td>80000023747</td><td>高三一班</td><td>548</td><td>1</td><td>1</td><td>119</td><td>1</td><td>1</td></tr>
+                        <tr><td>马鹏飞</td><td>80000023747</td><td>高三二班</td><td>544</td><td>1</td><td>1</td><td>118</td><td>1</td><td>1</td></tr>
+                        <tr><td>牛梦乐</td><td>80000023747</td><td>高三一班</td><td>548</td><td>1</td><td>1</td><td>119</td><td>1</td><td>1</td></tr>
+                        <tr><td>马鹏飞</td><td>80000023747</td><td>高三二班</td><td>544</td><td>1</td><td>1</td><td>118</td><td>1</td><td>1</td></tr>
+                        <tr><td>牛梦乐</td><td>80000023747</td><td>高三一班</td><td>548</td><td>1</td><td>1</td><td>119</td><td>1</td><td>1</td></tr>
+                        <tr><td>马鹏飞</td><td>80000023747</td><td>高三二班</td><td>544</td><td>1</td><td>1</td><td>118</td><td>1</td><td>1</td></tr>
+                        <tr><td>牛梦乐</td><td>80000023747</td><td>高三一班</td><td>548</td><td>1</td><td>1</td><td>119</td><td>1</td><td>1</td></tr>
+                        <tr><td>马鹏飞</td><td>80000023747</td><td>高三二班</td><td>544</td><td>1</td><td>1</td><td>118</td><td>1</td><td>1</td></tr>
+                        <tr><td>牛梦乐</td><td>80000023747</td><td>高三一班</td><td>548</td><td>1</td><td>1</td><td>119</td><td>1</td><td>1</td></tr>
+                        <tr><td>马鹏飞</td><td>80000023747</td><td>高三二班</td><td>544</td><td>1</td><td>1</td><td>118</td><td>1</td><td>1</td></tr>
+                        <tr><td>牛梦乐</td><td>80000023747</td><td>高三一班</td><td>548</td><td>1</td><td>1</td><td>119</td><td>1</td><td>1</td></tr>
+                        <tr><td>马鹏飞</td><td>80000023747</td><td>高三二班</td><td>544</td><td>1</td><td>1</td><td>118</td><td>1</td><td>1</td></tr>
+                        <tr><td>牛梦乐</td><td>80000023747</td><td>高三一班</td><td>548</td><td>1</td><td>1</td><td>119</td><td>1</td><td>1</td></tr>
+                        <tr><td>马鹏飞</td><td>80000023747</td><td>高三二班</td><td>544</td><td>1</td><td>1</td><td>118</td><td>1</td><td>1</td></tr>
+                    </tbody>
+                </table>
+                <nav class="ry-navigation" aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                        </li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                        </li>
+                    </ul>
+                    <div class="page-div">
+                        每页显示第<span class="c-orange">1</span>到第<span class="c-orange">25</span>条记录，总共<span class="c-orange">157</span>条记录 &nbsp;&nbsp;&nbsp; 每页显示
+                        <div class="btn-group ry-drop-down table-everypage">
+                            <button type="button" class="btn btn-default dropdown-toggle choose-sense" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                20 <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">20</a></li>
+                                <li><a href="#">50</a></li>
+                                <li><a href="#">100</a></li>
+                            </ul>
+                        </div>
+                        条记录
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="back-home"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;返回报告首页</button></div>
+    </section>
+    <footer>
+        
+    </footer>
+</body>
+</html>

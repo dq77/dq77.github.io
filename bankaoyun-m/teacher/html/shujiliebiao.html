@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>书籍列表</title>
+    <link rel="icon" href="http://ry.com.cn/img/favicon.ico" type="image/x-icon">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/ry-framwork.css" rel="stylesheet">
+    <link href="../css/book/ry-book.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
+	<link src="http://ry.com.cn/js/lib/tree/bootstrap-treeview.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+	
+<div id="head" class="navbar-wrapper">
+	<div class="container">
+		<nav class="navbar navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle pull-left" data-toggle="offcanvas" data-target="#rightMenu">
+						<i class="glyphicon glyphicon-list"></i>
+					</button>
+					<a class="navbar-brand text-hide logo" href="https://www.ry.com.cn/">东软睿云</a>
+				</div>
+				<div class="hidden-xs">
+					<ul class="nav navbar-nav nav-ry">
+						<li class="menu-index"><a href="https://www.ry.com.cn/">首页</a></li>
+                        <li class="menu-stu"><a href="https://www.ry.com.cn/report/record.htm">学生</a></li>
+                        <li class="menu-teacher"><a href="/portal/home.htm">教师</a></li>
+					</ul>
+					<div id="login" class="pull-right">
+						<ul class="nav nav-pills nav-info">
+							<li class="dropdown pull-right">
+                                <a data-toggle="dropdown" class="dropdown-toggle" href="#"> <i class="glyphicon glyphicon-user"></i>
+                                黄奕萍-项城一高20171201 <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right dropdown-ry">
+                                    <li class="menu-psnInfo"><a href="/user/userInfo.htm">
+                                        <i class="glyphicon glyphicon-info-sign"></i> 个人信息</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="menu-pwd"><a href="/user/updataPwd.htm"> 
+                                        <i class="glyphicon glyphicon-edit"></i> 修改密码</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li><a href="/logout.htm"> 
+                                        <i class="glyphicon glyphicon-log-out"></i> 退出</a>
+                                    </li>
+                                </ul>
+                            </li>
+						</ul>
+						<div>服务热线：400-630-0790</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+</div>
+<div id="body">
+	<div class="secMenu hidden-xs">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li class="menu-t-record"><a href="/report/record.htm">评测报告</a></li>
+                <li class="menu-t-paper"><a href="/paper/paper.htm">精品试卷</a></li>
+                <li class="menu-t-knowledge"><a href="/knowledge/knowledge.htm">知识树</a></li>
+                <li class="menu-t-book active"><a href="/book/bookList.htm">伴考云数据</a></li>
+                <li class="menu-t-homework"><a href="/homework/homework.htm">睿云作业</a></li>
+            </ul>
+        </div>
+    </div>
+	<div class="container content row-offcanvas row-offcanvas-right">	
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="col-lg-7 col-xs-12 pull-left">
+                    <h3 class="title-area book-ico">
+                        <div>伴考云数据</div>
+                        <small>学而不思则罔，思而不学则殆</small>
+                    </h3>
+                </div>
+                <div class="col-lg-5 col-xs-12 pull-right pr0 mt20">
+                    <form method="post" role="form" action="/book/preface.htm">
+                        <div class="col-xs-3 pl0 pr5">
+                            <select id="so" name="selectOption" class="form-control">
+                                <option value="0">考点</option>
+                                <option value="1">典型题</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-6 pl0 pr5">
+                            <input class="form-control" name="tpid" data-rule="序号: required;digits:true" placeholder="请输入二维码下方的序号" type="text">
+                            <input id="searchUrl" name="url" value="1" type="hidden">
+                            <span id="returnMsg" class="msg-box n-right" style="color: rgb(169, 68, 66); display: none;" for="tpid"></span>
+                        </div>
+                        <div class="col-xs-3 pl0 pr5">
+                            <input class="btn btn-primary bprint" value="快速查询" type="submit">
+                        </div>
+                    </form>  
+			    </div>
+            </div>
+        </div>
+	    <hr/>
+        <div class="row book-list">
+            <div class="col-sm-12">
+                <table class="table table-striped ">
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="line-display" class="ry-report-table-center" nowrap="nowrap">
+                                <div class="col-sm-1 col-xs-2">
+                                    <img class="img-responsive" src="../img/icon_subject_huaxue.png">
+                                </div>
+                                <div class="col-sm-11  col-xs-10">
+                                    <ul class="icons" id="text-left">
+                                        <li>
+                                            <div class="over-hide-300" title="伴考云2017河南高三第二轮冲刺化学辅导书">
+                                                <a href="./zongbiao.html">伴考云2017河南高三第二轮冲刺化学辅导书</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>	
+        <div class="modal fade" id="notBuyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modle-notbuy modal-body">
+                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                        该书未激活或未购买！
+                    </div>
+                </div>
+            </div>
+        </div>	
+	    <div id="rightMenu" class="sidebar-offcanvas visible-xs-block">
+			<div class="user-header">
+                <ul class="nav nav-pills nav-info">
+                    <img src="/img/head-teacher.png" class="img-circle img-responsive img-head">
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#"> 
+                            黄奕萍-项城一高20171201<b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-ry">
+                            <li class="menu-psnInfo"><a href="/user/userInfo.htm">
+                                <i class="glyphicon glyphicon-info-sign"></i> 个人信息</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="menu-pwd"><a href="/user/updataPwd.htm"> 
+                                <i class="glyphicon glyphicon-edit"></i> 修改密码</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="/logout.htm"> 
+                                <i class="glyphicon glyphicon-log-out"></i> 退出</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div>服务热线：400-630-0790</div>
+            </div>
+            <div>
+                <div id="navbar" class="menu-right">
+                    <div class="header"><a href="/">首页</a></div>
+                </div>
+                <div id="stuMenu" class="menu-right">
+                    <div class="header menu-stu">学生</div>
+                    <div class="container">
+                        <ul class="nav navbar-nav">
+                            <li class="menu-record"><a href="https://www.ry.com.cn/report/record.htm">历次报告</a></li>
+                            <li class="menu-"><a href="#">综合报告</a></li>
+                            <li class="menu-wqinfo"><a href="https://www.ry.com.cn/stuwq/wqinfo.htm">错题集</a></li>
+                            <li class="menu-knowledge"><a href="https://www.ry.com.cn/knowledge/knowledge.htm">知识树</a></li>
+                            <li class="menu-book"><a href="https://www.ry.com.cn/book/bookList.htm">伴考云数据</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="teachMenu" class="menu-right">
+                    <div class="header menu-teacher">教师</div>
+                    <div class="container">
+                        <ul class="nav navbar-nav">
+                            <li class="menu-t-record"><a href="/report/record.htm">评测报告</a></li>
+                            <li class="menu-t-paper"><a href="/paper/paper.htm">精品试卷</a></li>
+                            <li class="menu-t-knowledge"><a href="/knowledge/knowledge.htm">知识树</a></li>
+                            <li class="menu-t-book active"><a href="/book/bookList.htm">伴考云数据</a></li>
+                            <li class="menu-t-homework"><a href="/homework/homework.htm">睿云作业</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 col-xs-12">
+				<div class="breadcrumbs hidden-xs">
+					<div class="container">
+						<ul class="breadcrumb ">
+							<li><a href="/us/aboutUs.htm">关于我们</a></li>
+							<li><a href="/us/joinUs.htm">加盟合作</a></li>
+							<li><a href="/us/contactUs.htm">联系我们</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="wechat-footer visible-xs-block">
+					更多贴心服务请关注睿云微信：<span class="wechat">ruiyun360</span>
+				</div>
+				<p class="muted credit hidden-xs">
+                    版权所有 <span class="glyphicon glyphicon-copyright-mark"></span> 
+                    2014-2017 沈阳东软睿道教育服务有限公司
+				</p>
+				<p class="muted credit hidden-xs">ICP证：辽B2-20130060-6</p>
+			</div>
+			<div class="col-sm-4 hidden-xs">
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script src="../js/jquery-1.11.1.js"></script>
+<script src="/js/lib/bootstrap.min.js"></script>
+<script src="/js/lib/esl.js"></script>
+<script src="/js/pages/common/init.js"></script>
+
+
+<script src="/js/pages/book/book_list.js"></script>
+<script src="/js/lib/tree/bootstrap-treeview.js"></script>
+<script src="/js/lib/validate/jquery.validator.js"></script>
+<script src="/js/lib/validate/zh_CN.js"></script>
+
+
+</body>
+</html>

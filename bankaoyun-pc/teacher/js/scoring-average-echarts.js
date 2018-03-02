@@ -1,0 +1,108 @@
+$(function(){
+    var myChart = echarts.init(document.getElementById('scoring-average'));
+    option = {
+        color:  ['#CAECBA','#F4DCBB','#C2EDEF'],
+        tooltip : {
+            trigger: 'item',
+            formatter: function(param){
+                var str = param.seriesName + "<br/>";
+                str += param.name + "：" + param.data;
+                return str;
+            }
+        },
+        legend: {
+            data:['班级得分率','2017年应届得分率','2012-2016得分率']
+        },
+        xAxis : [
+            {
+                type : 'category',
+                data : ['全省平均','前20%学生层','中50%学生层','后30%学生层','全省一本','全省培优']
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value'
+            }
+        ],
+        series : [
+            {
+                name:'班级得分率',
+                type:'bar',
+                data:[0.48, 0.76, 0.58, 0.48, 0.72, 0.88],
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'top'
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        label: {
+                            textStyle: {
+                                color: '#8CC21F',
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                name:'2017年应届得分率',
+                type:'bar',
+                data:[0.59, 0.78, 0.59, 0.40, 0.8, 0.95],
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'top'
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        label: {
+                            textStyle: {
+                                color: '#F6AC2D',
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                name:'2012-2016得分率',
+                type:'bar',
+                data:[0.6, 0.84, 0.53, 0.47, 0.81, 0.97],
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'top'
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        label: {
+                            textStyle: {
+                                color: '#74C9EA',
+                            }
+                        }
+                    }
+                },
+                markLine: {
+                    data: [{
+                        yAxis: '0.42'
+                    }],
+                    tooltip: {
+                        formatter:'该学生的得分率：{c}'
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: '#FD8257',
+                            lineStyle: {
+                                type: 'solid',
+                                width: 2
+                            }
+                        }
+                    }
+                }
+            }
+        ]
+    };
+    myChart.setOption(option);
+});

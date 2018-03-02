@@ -1,0 +1,485 @@
+
+
+.fl {
+    float: left !important;
+}
+.c-green{
+    color: #8cc21f;
+    font-weight: bold;
+}
+.c-orange{
+    color: #f6ac2d;
+    font-weight: bold;
+}
+.c-red{
+    color: #ee8484;
+    font-weight: bold;
+}
+.c-blue{
+    color: #38beef;
+    font-weight: bold;
+}
+.c-gray{
+    color: #a6a9ac;
+}
+.color-ry-blue{
+    color: #26B7BC;
+}
+.bgc-green{
+    background-color: #8cc21f;
+}
+.bgc-light-green{
+    background-color: #daf7cd;
+}
+.bgc-orange{
+    background-color: #f6ac2d;
+}
+.bgc-light-orange{
+    background-color: #fff8e1;
+}
+.bgc-yellow{
+    background-color: #fde343;
+}
+.bgc-red{
+    background-color: #ee8484;
+}
+.bgc-light-red{
+    background-color: #ffedf5;
+}
+.bgc-blue{
+    background-color: #38beef;
+}
+.bgc-light-blue{
+    background-color: #e1f6fb;
+}
+.ry-table-striped > tbody {
+    border-bottom: 1px solid #ddd;
+}
+.ry-table-striped > tbody > tr:nth-of-type(2n+1) {
+    background-color: #fff;
+}
+.ry-table-striped > tbody > tr > td, .ry-table-striped > thead > tr > th {
+    text-align: center;
+    padding: 12px 0;
+        padding-left: 0px;
+}
+.nav3>li>a:focus{
+    background-color: #fff;
+}
+.nav3>li:first-child{
+	margin-bottom: 15px;
+}
+.nav3>li+li{
+    margin-bottom: 15px;
+    margin-left: 12px;
+}
+.nav3>li>a{
+    background-color: #efefef;
+    color: #5c6a77;
+}
+.nav3>li.active>a,.nav3>li.active>a:hover {
+    background-color: #26b7bc!important;
+    color: #fff;
+}
+.nav1>li>a:hover,.nav1>li>a:focus,
+.nav3>li>a:hover,.nav3>li>a:focus{
+    background-color: #fff;
+}
+.nav3 li.active>a{
+    font-weight: bold;
+}
+.nav6{
+    border-bottom: 2px solid #26b7bc;
+}
+.nav6>li+li{
+    margin-left: 12px;
+}
+.nav6>li>a{
+    border-radius: 4px 6px 0 0;
+    color: #5c6a77;
+    padding: 10px 28px;
+    background-color: #EEE;
+}
+.nav6>li.active>a,.nav6>li.active>a:hover,.nav6>li.active>a:focus{
+    background-color: #26b7bc;
+    color: #FFF;
+}
+a, a:active {
+    text-decoration: none;
+    color: #379ad6;
+}
+.ry-table-striped>thead{
+    background-color: #efefef;
+    text-align: center;
+}
+.ry-table-striped>thead>tr>th span.table-button{
+    display: inline-block;
+    width: 10px;
+    height: 15px;
+    padding: 4px 0 0 5px;
+}
+.ry-table-striped>tbody{
+    border-bottom: 1px solid #ddd;
+}
+.ry-table-striped>thead>tr>th{
+    text-align: center;
+    border: 0;
+}
+.ry-table-striped > tbody > tr{
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    text-align: center;
+}
+.ry-table-striped > tbody > tr>td,
+.ry-table-striped > thead > tr>th{
+    text-align: center;
+    padding: 12px 0;
+}
+.ry-table-striped > tbody > tr:hover{
+    border-left: 1px solid #26bcb7;
+    border-right: 1px solid #26bcb7;
+}
+.ry-table-striped > tbody > tr:hover>td{
+    border-top: 1px solid #26bcb7;
+    border-bottom: 1px solid #26bcb7;
+    background-color: #fff;
+}
+.ry-table-striped > tbody > tr:nth-of-type(2n+1){
+    background-color: #fff;
+}
+.ry-table-striped > tbody > tr:nth-of-type(2n){
+    background-color: #f6f9fb;
+}
+
+/* 考试相关的答题情况 */
+
+#body .content {
+    background-color: #FFF;
+}
+.back>h3>div{
+    color: #555;
+}
+.back>h3>small{
+    font-size: 14px;
+}
+.check-point{
+    font-size: 16px;
+    padding: 20px 15px 10px;
+}
+.question-num>label{
+    line-height: 40px;
+}
+.question-header {
+    border-bottom: 1px solid #e1e4e8;
+    height: 30px;
+    margin-bottom: 10px;
+}
+.question-header span {
+    display: inline-block;
+    background-color: #fff;
+    color: #26b7bc;
+    margin-top: 16px;
+    padding-right: 15px;
+    font-size: 18px;
+}
+.question-info {
+    border-bottom: 1px dashed #e1e4e8;
+    padding: 15px 0;
+}
+.question-info > h3 {
+    border-left: 4px solid #26b7bc;
+    height: 26px;
+    line-height: 26px;
+    padding-left: 8px;
+    margin: 0 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.question-pic {
+    padding-top: 15px;
+}
+.answer-info {
+    overflow: hidden;
+}
+.answer-info > h3, .answer-info > div {
+    float: left;
+}
+.question-step-analyze {
+    overflow: hidden;
+    padding: 6px 0;
+    background-color: #F7FAFC;
+    line-height: 32px;
+}
+.question-step-analyze > div {
+    margin: 0 15px;
+}
+.question-step-analyze span {
+    font-weight: bold;
+    margin-right: 25px;
+}
+.excellent-info {
+    border-bottom: 0;
+}
+.excellent-answer {
+    height: 26px;
+    line-height: 26px;
+    padding-left: 15px;
+}
+.option-rate {
+    padding-top: 15px;
+}
+.option-rate > div:first-child {
+    height: 220px;
+    padding-right: 0;
+}
+.option-rate > div > table.ry-table-striped > tbody > tr {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+.option-rate > div > table.ry-table-striped > tbody > tr > td {
+    text-align: left;
+    padding-left: 15px;
+}
+.option-rate > div > table > tbody > tr > td:first-child {
+    width: 140px;
+    vertical-align: middle;
+    padding-left: 35px;
+    background-color: #f1f1f2;
+}
+.option-rate > div > table > tbody > tr > td > img {
+    float: left;
+    margin-left: -26px;
+    margin-right: -28px;
+}
+
+/* 学生的答题情况 */
+.wrong-rate-legend{
+    font-size: 14px;
+}
+.wrong-rate-legend > span{
+    width: 16px;
+    border-radius: 8px;
+    display: inline-block;
+    height: 16px;
+    margin: 0 6px -3px;
+}
+/* 学生的考点掌握度 */
+.stu-info .color-ry-blue{
+    font-size: 16px;
+}
+.stu-point-rate-table thead tr td{
+    background-color: #26B7BC;
+    color: #FFF;
+    padding: 12px 8px;
+}
+.stu-point-rate-table td{
+    border-right: 1px solid #DDD;
+}
+#scoring-average{
+    height: 280px;
+}
+/* 书籍列表 */
+.book-year span{
+    font-size: 20px;
+}
+.books-list>div{
+    padding: 15px;
+}
+.books-list a.bookname{
+    padding: 15px;
+    display: inline-block;
+    height: 180px;
+    width: 100%;
+    font-size: 16px;
+    color: #FFF;
+    text-align: center;
+    vertical-align: middle;
+    background: #82D8BA;
+    background: linear-gradient(135deg, #81D7BA, #2CC38E);
+    text-decoration-line: none;
+}
+.books-list a.bookname .book-info{
+    text-align: left;
+    margin-left: -15px;
+}
+.books-list a.bookname .book-info .grade-name{
+    padding: 2px 12px;
+    background-color: #15C789;
+}
+.books-list a.bookname .book-info .sub-name{
+    padding: 2px 12px;
+    background-color: #FFFD8F;
+    color: #15C789;
+}
+.books-list a.bookname.no-permission{
+    background: #BEBEBE;
+    background: linear-gradient(135deg, #C3C3C3, #A7A7A7);
+}
+.books-list a.bookname.no-permission .book-info .grade-name{
+    background-color: #A0A0A0;
+}
+.books-list a.bookname.no-permission .book-info .sub-name{
+    background-color: #C6C6C6;
+    color: #999999;
+}
+.books-list a.bookname .book-title{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.books-list .activate{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid #379AD6;
+    margin-left: -41px;
+}
+.books-list .activate a{
+    display: block;
+    padding: 5px 15px;
+    font-size: 16px;
+}
+/* 书籍列表1 */
+.book-list .book-year{
+    font-size: 16px;
+}
+.book-list .book-year span{
+    font-size: 46px;
+}
+.book-list table ul{
+    margin-bottom: 0;
+}
+.book-list table ul li{
+    line-height: 30px;
+    font-size: 16px;
+}
+/* 考点概述 */
+.choose-class.mt20{
+    border-bottom: 1px solid #DDD;
+}
+.directory-border{
+}
+.book-title-msg {
+    height: auto;
+    padding: 0 0 5px;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    border-bottom: 1px solid #ddd;
+}
+.book-title-msg select{
+    font-size: 12px;
+}
+.book-title-msg .popover-content{
+    width: 160px;
+    line-height: 20px;
+    font-size: 14px;
+}
+.book-title-msg .popover-content span,
+.list-group-item span.bgc-green,
+.list-group-item span.bgc-red,
+.point-zw tbody span.bgc-red,
+.point-zw tbody span.bgc-green{
+    width: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    height: 10px;
+    margin: 0 5px 0;
+}
+.book-title-msg a#whats-circle{
+    padding: 6px 0;
+}
+.book-title-msg a#whats-circle span{
+    color: #333;
+}
+.book-title-msg a#whats-circle:active,
+#no-book-info:active{
+    box-shadow: none;
+}
+.dfl-title{
+    font-weight: bold;
+    color: #26b7bc;
+    text-align: center;
+    margin: 15px 0;
+}
+#dfl_chart{
+    padding-left: 0;
+    padding-right: 0;
+    border: 1px solid #DDD;
+}
+.point-zw thead tr th {
+    background-color: #26B7BC;
+    color: #FFF;
+    padding: 12px 8px;
+    font-weight: normal;
+}
+#no-book-info{
+    padding: 0;
+}
+#no-book-info span{
+    color: #CCC;
+}
+/* 总表 */
+#clazz .nav a,
+#clazz label{
+    padding: 10px 15px;
+}
+.nowstu-data label{
+    padding-left: 0;
+    padding-right: 0;
+    padding: 10px 0;
+}
+.choose-data-title{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.table-head{padding-right:17px;background-color:#EFEFEF;}
+.table-body{height:500px;overflow-y:scroll;min-width: 1130px;}
+.table-head table,.table-body table{
+    width:100%;
+    min-width: 1110px;
+    font-size: 12px
+}
+.table-head table thead th,
+.table-body table tbody td{
+    padding: 10px 0;
+    border: 1px solid #CCC;
+    text-align: center;
+}
+.fwn{
+    font-weight: normal;
+}
+.table-body table tbody td.tal{
+    text-align: left;
+    padding-left: 15px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    max-width: 222px;
+}
+#msgcontent{
+    overflow: auto;
+}
+#msgcontent .table-head tr th.bgc-grey{
+    background-color: #E6E6E6;
+}
+#msgcontent .table-body tr td.bgc-light-blue,
+#msgcontent .table-body tr td.bgc-light-red,
+#msgcontent .table-body tr td.bgc-light-green{
+    font-weight: bold;
+}
+.msgcontent-legend{
+    font-size: 12px;
+    display: table;
+    padding: 0 15px;
+    border: 1px dotted #dde0e4;
+    line-height: 36px;
+}
+.msgcontent-legend span{
+    display: inline-block;
+    height: 16px;
+    width: 28px;
+    margin: 0 6px -3px;
+}

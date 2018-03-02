@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>学生分段统计</title>
+    <link href="../css/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
+    <link href="../css/stu-rank.css" rel="stylesheet">
+    <link href="../css/tea-common-css.css" rel="stylesheet">
+    <script src="../js/jquery.js"></script>
+    <script src="../css/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="../js/index.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+        <script src="../js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header>
+        
+        <h1 class="report-title">
+            <img src="../img/report-title.png" alt=""/>数学(理科)考试分析报告</h1>
+        <div class="menu">
+            当前视角
+            <div class="btn-group ry-drop-down choose-sense">
+                <button type="button" class="btn btn-default dropdown-toggle choose-sense" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    数学科任教师 <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">数学科任教师</a></li>
+                    <li><a href="#">语文科任教师</a></li>
+                    <li><a href="#">XXXX</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <nav class="choose-subject">
+        <div>
+            <h2>2017年中阳县高三年级第七次名校联考</h2>
+        </div>
+        <div>
+            <ul class="nav nav-pills nav1">
+                <li class="active"><a href="#">数学（理）</a></li>
+                <li><a href="#">数学（文）</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="full-back">
+        <div class="left-area">
+            <div class="ry-teach-repo-div">
+                <ul class="nav nav-pills nav-stacked ry-teachrepotr-nav-left">
+                    <li><a href="./index.html"><div><span class="glyphicon glyphicon-home"></span></div>首页概述</a></li>
+                    <li class="active"><a href="./online-rate.html"><div><span class="glyphicon glyphicon-signal"></span></div>重要数据统计</a></li>
+                    <li><a href="./question-analyze.html"><div><span class="glyphicon glyphicon-list-alt"></span></div>试题分析</a></li>
+                    <li><a href="./knowledge-point-analyze.html"><div><span class="glyphicon glyphicon-education"></span></div>试题知识点分析</a></li>
+                    <li><a href="#"><div><span class="glyphicon glyphicon-tasks"></span></div>试卷质量分析</a></li>
+                </ul>
+                <a href="####" class="toggle-nav-button"><img src="../img/toggle-button.png"></a>
+            </div>
+        </div>
+        <div class="row main-view">
+            <div class="tea-report-navrow">
+                <ul class="nav nav-pills nav2">
+                    <li class="senior-only"><a href="./online-rate.html">上线率<p>(仅高年级)</p></a></li>
+                    <li><a href="#">四率对比</a></li>
+                    <li><a href="./stu-rank.html">学生成绩排名</a></li>
+                    <li><a href="#">数学小题分</a></li>
+                    <li><a href="#">试题失分率</a></li>
+                    <li class="active"><a href="./segmented.html">学生分段统计<span class="caret"></span></a></li>
+                    <li><a href="#">各档学生平均分</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-12">
+                <div class="main-report-title">
+                    <button type="button" class="btn ry-btn-blue fr">下载Excel表格</button>
+                    <h1>学生分段统计</h1>
+                    <p>比较分数段相同的学生，在各班的分布数量</p>
+                </div>
+                <form action="" class="choose-form">
+                    <ul>
+                        <li class="clearfix">
+                            <div>请设置分数段</div>
+                            <div class="vaild-score">
+                                <div class="fl"> 
+                                    比较
+                                    <div class="btn-group ry-drop-down">
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            100分 <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">200分</a></li>
+                                            <li><a href="#">300分</a></li>
+                                            <li><a href="#">400分</a></li>
+                                        </ul>
+                                    </div>至
+                                    <div class="btn-group ry-drop-down">
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            400分 <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">500分</a></li>
+                                            <li><a href="#">600分</a></li>
+                                            <li><a href="#">700分</a></li>
+                                        </ul>
+                                    </div>
+                                    区间，间隔值为
+                                    <div class="btn-group ry-drop-down">
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            100 <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">150</a></li>
+                                            <li><a href="#">200</a></li>
+                                            <li><a href="#">250</a></li>
+                                        </ul>
+                                    </div>各班级学生的分布数量。
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div>选择对比班级</div>
+                            <div class="fl">
+                                <div class="choose-class">
+                                    <label class="checkbox-inline ry-checkbox">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 全部所教班级
+                                    </label>
+                                </div>
+                                <div class="choose-class">
+                                    <label class="checkbox-inline ry-checkbox">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 高三一班
+                                    </label>
+                                    <label class="checkbox-inline ry-checkbox">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 高三二班
+                                    </label>
+                                    <label class="checkbox-inline ry-checkbox">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 高三三班
+                                    </label>
+                                    <label class="checkbox-inline ry-checkbox">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 高三四班
+                                    </label>
+                                    <label class="checkbox-inline ry-checkbox">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 高三五班
+                                    </label>
+                                    <label class="checkbox-inline ry-checkbox">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 高三六班
+                                    </label>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+                <div class="statistics">
+                    <button type="button" class="btn ry-btn-blue">立即统计</button>
+                    <div class="fr">
+                        <div class="legend">
+                            图例：<span class="bgc-light-green"></span>分布人数最多的班级&nbsp;
+                        </div>
+                    </div>
+                </div>
+                <div class="table-title">
+                    <div class="fl">
+                        各班级中总成绩<span class="c-orange">100分——400分</span>，间隔值为<span class="c-orange">100分</span>的学生分布
+                    </div>
+                    <div class="fr">
+                        <button type="button" class="btn ry-btn-red">清除表格</button>
+                    </div>
+                </div>
+                <table class="table table-striped ry-table-striped stu-distribute-table">
+                    <thead>
+                        <tr>
+                            <th>班级</th><th>高三一班</th><th>高三二班</th><th>高三三班</th><th>高三四班</th><th>高三五班</th><th>高三六班</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>300 - 400</td><td>5人</td><td>4人</td><td>6人</td><td class="bgc-light-green">7人</td><td>3人</td><td>4人</td></tr>
+                        <tr><td>200 - 300</td><td>5人</td><td>4人</td><td class="bgc-light-green">6人</td><td>7人</td><td>3人</td><td>4人</td></tr>
+                        <tr><td>100 - 200</td><td>5人</td><td>4人</td><td>6人</td><td class="bgc-light-green">7人</td><td>3人</td><td>4人</td></tr>
+                    </tbody>
+                </table>
+                <div class="table-title">
+                    <div class="fl">
+                        各班级中总成绩<span class="c-orange">100分——250分</span>，间隔值为<span class="c-orange">50分</span>的学生分布
+                    </div>
+                    <div class="fr">
+                        <button type="button" class="btn ry-btn-red">清除表格</button>
+                    </div>
+                </div>
+                <table class="table table-striped ry-table-striped stu-distribute-table">
+                    <thead>
+                        <tr>
+                            <th>班级</th><th>高三一班</th><th>高三二班</th><th>高三三班</th><th>高三四班</th><th>高三五班</th><th>高三六班</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>200 - 250</td><td>5人</td><td>4人</td><td>6人</td><td class="bgc-light-green">7人</td><td>3人</td><td>4人</td></tr>
+                        <tr><td>150 - 200</td><td>5人</td><td>4人</td><td class="bgc-light-green">6人</td><td>7人</td><td>3人</td><td>4人</td></tr>
+                        <tr><td>100 - 150</td><td>5人</td><td>4人</td><td>6人</td><td class="bgc-light-green">7人</td><td>3人</td><td>4人</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="back-home"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;返回报告首页</button></div>
+    </section>
+    <footer>
+        
+    </footer>
+</body>
+</html>
