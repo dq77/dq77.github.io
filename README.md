@@ -1,3 +1,3 @@
-# dq77.github.io
+# diaoqi
 各种静态项目
-#### 电脑端[教师报告](https://dq77.github.io/teacher-report/html/index.html)
+#### 主页 [https://diaoqi.gitee.io](https://diaoqi.gitee.io)
