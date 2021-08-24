@@ -1,3 +1,8 @@
-# diaoqi
-清空仓库 转至gitee
-#### 主页 [https://diaoqi.gitee.io](https://diaoqi.gitee.io)
+### 个人主页迁移通知
+国内CDN太贵了，买不起了。
+
+于是我们作出了一个非常艰难的决定：清空仓库，转至gitee。
+
+大家可以 [点击这里](https://diaoqi.gitee.io) 跳转至新的主页，
+
+新主页建设中，现在还有点简陋，你看不看吧。
